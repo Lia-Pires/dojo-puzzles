@@ -6,14 +6,13 @@ Todos os problemas foram resolvidos utilizando Python 3.11.2.
 
 ## Como navegar pelo repositório
 
-Cada problema resolvido possui sua própria pasta, contendo o arquivo do código fonte com a solução. 
+Cada problema resolvido possui sua própria pasta, contendo o arquivo com o enunciado do problema e código fonte com a solução. 
 
 ## Lista de Problemas
-
-| Problema |
-| --- | 
-| [Crivo de Eratóstenes](https://github.com/Lia-Pires/dojo-puzzles/blob/main/Dojo_puzzles/crivo-eratostenes/crivo_eratostenes.py) |
-| [Diamantes](https://github.com/Lia-Pires/dojo-puzzles/tree/main/Dojo_puzzles/diamantes) | 
+| Id | Problema |
+|---------|-------|
+| 1    | [Crivo de Eratóstenes](https://github.com/Lia-Pires/dojo-puzzles/blob/main/Dojo_puzzles/crivo-eratostenes/crivo_eratostenes.py) |
+| 2  | [Diamantes](https://github.com/Lia-Pires/dojo-puzzles/tree/main/Dojo_puzzles/diamantes) |
 
 
 ## Como executar as soluções
