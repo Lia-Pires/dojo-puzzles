@@ -8,11 +8,12 @@ Todos os problemas foram resolvidos utilizando Python 3.11.2.
 
 Cada problema resolvido possui sua própria pasta, contendo o arquivo com o enunciado do problema e código fonte com a solução. 
 
-## Lista de Problemas
-| Id | Problema |
-|---------|-------|
-| 1    | [Crivo de Eratóstenes](https://github.com/Lia-Pires/dojo-puzzles/blob/main/Dojo_puzzles/crivo-eratostenes/crivo_eratostenes.py) |
-| 2  | [Diamantes](https://github.com/Lia-Pires/dojo-puzzles/tree/main/Dojo_puzzles/diamantes) |
+
+| Id | Problema | Fonte |
+|------|-------|--------|
+| 1  | [Crivo de Eratóstenes](https://github.com/Lia-Pires/dojo-puzzles/blob/main/Dojo_puzzles/crivo-eratostenes/crivo_eratostenes.py)    | [Fonte](https://dojopuzzles.com/problems/crivo-de-eratostenes/) |
+| 2 | [Diamantes](https://github.com/Lia-Pires/dojo-puzzles/tree/main/Dojo_puzzles/diamantes) |   [Fonte](https://dojopuzzles.com/problems/diamantes/) |
+| 3 | [Batalha Naval](https://github.com/Lia-Pires/dojo-puzzles) |  [Fonte](https://dojopuzzles.com/problems/batalha-naval/) |
 
 
 ## Como executar as soluções
