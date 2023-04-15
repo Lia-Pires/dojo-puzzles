@@ -10,7 +10,7 @@ para baixo, exemplo, quer se saber todos os números primos entre 1 e 30, logo
 o processo continuará até 30^(1/2) = 5.47 pega se apenas a parte inteira logo 
 obtemos 5. (floor(sqrt(30))) => ⌊√30⌋
 """
-import math
+from math import sqrt, floor
 
 
 def primos_range(numero: int) -> list:
@@ -19,9 +19,8 @@ def primos_range(numero: int) -> list:
         total_divisor = 0
         divisor = numero
         while divisor >= 1:
-            resultado = numero % divisor
             divisor -= 1
-            if resultado == 0:
+            if numero % divisor == 0:
                 total_divisor += 1
         if total_divisor == 2:
             lista_primos.append(numero)
@@ -29,8 +28,7 @@ def primos_range(numero: int) -> list:
     return lista_primos
 
 
-numero = 9500
-# numero = int(input("Digite um número qualquer: "))
-crivo_erastostenes = primos_range(math.floor(math.sqrt((numero))))
+numero = int(input("Digite um número inteiro qualquer: "))
+crivo_erastostenes = primos_range(floor(sqrt((numero))))
 
 print(f"Os números primos até o limite {numero} são: {crivo_erastostenes}")
