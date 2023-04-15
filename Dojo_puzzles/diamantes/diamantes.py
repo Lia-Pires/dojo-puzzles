@@ -41,46 +41,38 @@ C   C
 import string
 
 alfabeto = list(string.ascii_uppercase)
-# letra_digitada = input(f"Digite uma letra qualquer: ").upper()
-letra_digitada = "Z"
+letra_digitada = input(f'Digite uma letra do alfaberto diferente de "A": ').upper()
 
 espaco = " "
-espacos = alfabeto.index(letra_digitada) + 1
-letra_anterior = None
-lista_ate_digitada = [
+espaco_inicio = alfabeto.index(letra_digitada) + 1
+espaco_meio = 0
+lista_ate_letra_digitada = [
     letra
     for letra in alfabeto
     if alfabeto.index(letra) <= alfabeto.index(letra_digitada)
 ]
 
-for letra in lista_ate_digitada:
-    espacos -= 1
+for letra in lista_ate_letra_digitada:
+    espaco_inicio -= 1
 
     if letra == "A":
-        print(f"{espaco * espacos}{letra}")
-        letra_anterior = letra
+        print(f"{espaco * espaco_inicio}{letra}")
     else:
-        meio = (
-            (lista_ate_digitada.index(letra_anterior) + lista_ate_digitada.index(letra))
-            if letra_anterior in lista_ate_digitada
-            else espacos
-        )
-        print(f"{espaco * espacos}{letra}{espaco * meio}{letra}")
-        letra_anterior = letra
+        espaco_meio += 2
+        print(f"{espaco * espaco_inicio}{letra}{espaco * espaco_meio}{letra}")
     print()
 
-lista_invertida = list(reversed(lista_ate_digitada))
-espacos = alfabeto.index(letra_digitada) + 1
-espacos = 1
+lista_invertida = list(reversed(lista_ate_letra_digitada))
+espaco_inicio = 1
 
 for letra in lista_invertida:
     if lista_invertida.index(letra) != 0 and letra != "A":
-        meio -= 2
-        print(f"{espaco * espacos}{letra}{espaco * meio}{letra}")
+        espaco_meio -= 2
+        print(f"{espaco * espaco_inicio}{letra}{espaco * espaco_meio}{letra}")
         print()
-        espacos += 1
+        espaco_inicio += 1
     if letra == "A":
-        print(f"{espaco * espacos}{letra}")
+        print(f"{espaco * espaco_inicio}{letra}")
 
 
 # alfabeto.index(letra_digitada.upper())
