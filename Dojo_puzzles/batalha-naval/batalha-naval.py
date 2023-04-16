@@ -54,10 +54,55 @@ class Tabuleiro:
         for itens in lista:
             jogador.tabuleiro[itens[0]][itens[1]]= "p.a"
 
+    
+    def posicionar_encouracado(jogador, num1: int, num2:int, num3:int, num4:int, num5:int, num6:int, num7:int, num8:int):
+        
+        lista = [[num1, num2], [num3, num4], [num5, num6], [num7, num8]]
 
-"""um porta-aviões (comprimento 5), um encouraçado 
-(comprimento 4), um submarino e um destroyer (ambom de comprimento 3), 
-e barco de patrulha (comprimento 2"""
+        for itens in lista:
+                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
+                    print("O espaço já está sendo ocupado, tente novamente!")
+                    pass 
+
+        for itens in lista:
+            jogador.tabuleiro[itens[0]][itens[1]]= "enc"
+
+
+    def posicionar_submarino(jogador, num1: int, num2:int, num3:int, num4:int, num5:int, num6:int):
+        
+        lista = [[num1, num2], [num3, num4], [num5, num6]]
+
+        for itens in lista:
+                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
+                    print("O espaço já está sendo ocupado, tente novamente!")
+                    pass 
+
+        for itens in lista:
+            jogador.tabuleiro[itens[0]][itens[1]]= "sub"
+    
+    def posicionar_destroyer(jogador, num1: int, num2:int, num3:int, num4:int, num5:int, num6:int):
+        
+        lista = [[num1, num2], [num3, num4], [num5, num6]]
+
+        for itens in lista:
+                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
+                    print("O espaço já está sendo ocupado, tente novamente!")
+                    pass 
+
+        for itens in lista:
+            jogador.tabuleiro[itens[0]][itens[1]]= "des"
+    
+    def posicionar_barco_patrulha(jogador, num1: int, num2:int, num3:int, num4:int):
+        
+        lista = [[num1, num2], [num3, num4]]
+
+        for itens in lista:
+                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
+                    print("O espaço já está sendo ocupado, tente novamente!")
+                    pass 
+
+        for itens in lista:
+            jogador.tabuleiro[itens[0]][itens[1]]= "b.p"
 
 
 
