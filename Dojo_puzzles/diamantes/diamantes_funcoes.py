@@ -90,5 +90,3 @@ def base_diamante(lista_invertida: list) -> None:
             espaco_inicio += 1
         if letra == "A":
             print(f"{espaco * espaco_inicio}{letra}")
-
-

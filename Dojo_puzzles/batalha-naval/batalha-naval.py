@@ -1,4 +1,4 @@
-'''
+"""
 Cada jogador deve dispor de uma área de 10x10 onde ele vai posicionar 5 navios 
 de tamanhos diferentes: um porta-aviões (comprimento 5), um encouraçado 
 (comprimento 4), um submarino e um destroyer (também de comprimento 3), 
@@ -25,22 +25,19 @@ foram bem sucedidos ou não;
 Informar quando um navio é atingido e quando ele é afundado;
 Exibir ao final do jogo um mapa final do posicionamento final dos navios 
 dos jogadores.
-'''
+"""
 
 
 # Em andamento
 class Tabuleiro:
-
     def __init__(self):
+        A = [0, 1, 2, 3, 4]
+        B = [0, 1, 2, 3, 4]
+        C = [0, 1, 2, 3, 4]
+        D = [0, 1, 2, 3, 4]
+        E = [0, 1, 2, 3, 4]
 
-        A = [0, 0, 0, "a", 0] 
-        B = [0, 0, 0, 0, 0]
-        C = [0, 0, 0, 0, 0]
-        D = [0, 0, 0, 0, 0]
-        E = [0, 0, 0, 0, 0] 
-
-        self.tabuleiro = [ A, B, C, D, E]
-
+        self.tabuleiro = [A, B, C, D, E]
 
     def verificar_espacos(lista: list, jogador) -> bool:
         verificacao = []
@@ -51,68 +48,68 @@ class Tabuleiro:
                 print("O espaço já está sendo ocupado, tente novamente!")
                 return False
         if all(verificacao) == True:
-            return True     
+            return True
 
-
-    def posicionar_porta_avioes(jogador, num1: int, num2:int, num3:int, num4:int, num5:int, num6:int, num7:int, num8:int, num9:int, num10:int):
-        
+    def posicionar_porta_avioes(
+        jogador,
+        num1: int,
+        num2: int,
+        num3: int,
+        num4: int,
+        num5: int,
+        num6: int,
+        num7: int,
+        num8: int,
+        num9: int,
+        num10: int,
+    ):
         lista = [[num1, num2], [num3, num4], [num5, num6], [num7, num8], [num9, num10]]
 
         if Tabuleiro.verificar_espacos(lista, jogador):
-
             for itens in lista:
-                jogador.tabuleiro[itens[0]][itens[1]]= "p.a"
+                jogador.tabuleiro[itens[0]][itens[1]] = "p.a"
 
-    
-    def posicionar_encouracado(jogador, num1: int, num2:int, num3:int, num4:int, num5:int, num6:int, num7:int, num8:int):
-        
+    def posicionar_encouracado(
+        jogador,
+        num1: int,
+        num2: int,
+        num3: int,
+        num4: int,
+        num5: int,
+        num6: int,
+        num7: int,
+        num8: int,
+    ):
         lista = [[num1, num2], [num3, num4], [num5, num6], [num7, num8]]
 
-        for itens in lista:
-                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
-                    print("O espaço já está sendo ocupado, tente novamente!")
-                    pass 
+        if Tabuleiro.verificar_espacos(lista, jogador):
+            for itens in lista:
+                jogador.tabuleiro[itens[0]][itens[1]] = "enc"
 
-        for itens in lista:
-            jogador.tabuleiro[itens[0]][itens[1]]= "enc"
-
-
-    def posicionar_submarino(jogador, num1: int, num2:int, num3:int, num4:int, num5:int, num6:int):
-        
+    def posicionar_submarino(
+        jogador, num1: int, num2: int, num3: int, num4: int, num5: int, num6: int
+    ):
         lista = [[num1, num2], [num3, num4], [num5, num6]]
 
-        for itens in lista:
-                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
-                    print("O espaço já está sendo ocupado, tente novamente!")
-                    pass 
+        if Tabuleiro.verificar_espacos(lista, jogador):
+            for itens in lista:
+                jogador.tabuleiro[itens[0]][itens[1]] = "sub"
 
-        for itens in lista:
-            jogador.tabuleiro[itens[0]][itens[1]]= "sub"
-    
-    def posicionar_destroyer(jogador, num1: int, num2:int, num3:int, num4:int, num5:int, num6:int):
-        
+    def posicionar_destroyer(
+        jogador, num1: int, num2: int, num3: int, num4: int, num5: int, num6: int
+    ):
         lista = [[num1, num2], [num3, num4], [num5, num6]]
 
-        for itens in lista:
-                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
-                    print("O espaço já está sendo ocupado, tente novamente!")
-                    pass 
+        if Tabuleiro.verificar_espacos(lista, jogador):
+            for itens in lista:
+                jogador.tabuleiro[itens[0]][itens[1]] = "des"
 
-        for itens in lista:
-            jogador.tabuleiro[itens[0]][itens[1]]= "des"
-    
-    def posicionar_barco_patrulha(jogador, num1: int, num2:int, num3:int, num4:int):
-        
+    def posicionar_barco_patrulha(jogador, num1: int, num2: int, num3: int, num4: int):
         lista = [[num1, num2], [num3, num4]]
 
-        for itens in lista:
-                if type(jogador.tabuleiro[itens[0]][itens[1]]) != int:
-                    print("O espaço já está sendo ocupado, tente novamente!")
-                    pass 
-
-        for itens in lista:
-            jogador.tabuleiro[itens[0]][itens[1]]= "b.p"
-
+        if Tabuleiro.verificar_espacos(lista, jogador):
+            for itens in lista:
+                jogador.tabuleiro[itens[0]][itens[1]] = "b.p"
 
 
 jogador_1 = Tabuleiro()
