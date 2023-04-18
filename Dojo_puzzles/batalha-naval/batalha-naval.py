@@ -26,19 +26,21 @@ Informar quando um navio é atingido e quando ele é afundado;
 Exibir ao final do jogo um mapa final do posicionamento final dos navios 
 dos jogadores.
 """
+from typing import Type
 
 
 # Em andamento
 class Tabuleiro:
     def __init__(self):
-        A = [0, 1, 2, 3, 4]
-        B = [0, 1, 2, 3, 4]
-        C = [0, 1, 2, 3, 4]
-        D = [0, 1, 2, 3, 4]
-        E = [0, 1, 2, 3, 4]
+        A = [0, 1, "a", 3, 4]
+        B = [0, 1, "a", 3, 4]
+        C = [0, 1, "a", 3, 4]
+        D = [0, 1, "a", 3, 4]
+        E = [0, 1, "a", 3, 4]
 
         self.tabuleiro = [A, B, C, D, E]
 
+    # TODO: colocar o tipo de jogador nas annotations
     def verificar_espacos(lista: list, jogador) -> bool:
         verificacao = []
         for itens in lista:
@@ -116,6 +118,10 @@ jogador_1 = Tabuleiro()
 jogador_2 = Tabuleiro()
 
 Tabuleiro.posicionar_porta_avioes(jogador_1, 0, 0, 0, 1, 0, 2, 0, 3, 0, 4)
+Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 2, 3, 4)
+Tabuleiro.posicionar_destroyer(jogador_1, 1, 2, 3, 1, 2, 3)
+Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
+Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
 
 
 for indice in jogador_1.tabuleiro:
