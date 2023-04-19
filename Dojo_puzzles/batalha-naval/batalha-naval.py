@@ -32,7 +32,7 @@ from typing import Type
 # Em andamento
 class Tabuleiro:
     def __init__(self):
-        A = [0, 1, "a", 3, 4]
+        A = [0, 1, 2, 3, 4]
         B = [0, 1, "a", 3, 4]
         C = [0, 1, "a", 3, 4]
         D = [0, 1, "a", 3, 4]
@@ -45,12 +45,11 @@ class Tabuleiro:
         verificacao = []
         for itens in lista:
             if type(jogador.tabuleiro[itens[0]][itens[1]]) == int:
-                verificacao.append(True)
+                pass
             else:
                 print("O espaço já está sendo ocupado, tente novamente!")
                 return False
-        if all(verificacao) == True:
-            return True
+        return True
 
     def posicionar_porta_avioes(
         jogador,
@@ -118,7 +117,7 @@ jogador_1 = Tabuleiro()
 jogador_2 = Tabuleiro()
 
 Tabuleiro.posicionar_porta_avioes(jogador_1, 0, 0, 0, 1, 0, 2, 0, 3, 0, 4)
-Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 2, 3, 4)
+Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 1, 3, 4)
 Tabuleiro.posicionar_destroyer(jogador_1, 1, 2, 3, 1, 2, 3)
 Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
 Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
