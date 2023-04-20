@@ -161,6 +161,13 @@ class Tabuleiro:
             print(f"{ind} [*, *, *, *, *]")
             ind += 1
 
+    def atacar_oponente(oponente, num1, num2):
+        if oponente.tabuleiro[num1][num2] is not int:
+            print(f"Você atingiu uma parte {oponente.tabuleiro[num1][num2]}")
+            oponente.tabuleiro[num1][num2] = 0
+        else:
+            print("Você não atingiu seu oponente, aguarde a próxima rodada.")
+
 
 jogador_1 = Tabuleiro()
 jogador_2 = Tabuleiro()
