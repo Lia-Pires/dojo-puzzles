@@ -33,16 +33,15 @@ from typing import Type
 class Tabuleiro:
     def __init__(self):
         A = [0, 1, 2, 3, 4]
-        B = [0, 1, "a", 3, 4]
-        C = [0, 1, "a", 3, 4]
-        D = [0, 1, "a", 3, 4]
+        B = [0, 1, 2, 3, 4]
+        C = [0, 1, 2, 3, 4]
+        D = [0, 1, 2, 3, 4]
         E = [0, 1, "a", 3, 4]
 
         self.tabuleiro = [A, B, C, D, E]
 
     # TODO: colocar o tipo de jogador nas annotations
     def verificar_espacos(lista: list, jogador) -> bool:
-        verificacao = []
         for itens in lista:
             if type(jogador.tabuleiro[itens[0]][itens[1]]) == int:
                 pass
@@ -168,28 +167,18 @@ class Tabuleiro:
         else:
             print("Você não atingiu seu oponente, aguarde a próxima rodada.")
 
+    def verificar_fim_partida(jogador):
+        for lista in jogador.tabuleiro:
+            fim = all(isinstance(item, int) for item in lista)
+            if fim == False:
+                return False, print("A partida continua, próxima rodada!")
+            else:
+                pass
+        return True, print("A partida chegou ao fim")
+
 
 jogador_1 = Tabuleiro()
 jogador_2 = Tabuleiro()
 
 
-#     Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 1, 3, 4)
-
-#     Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
-#     Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
-
-
-# Tabuleiro.posicionar_porta_avioes(jogador_1, 0, 0, 0, 1, 0, 2, 0, 3, 0, 4)
-# Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 1, 3, 4)
-# Tabuleiro.posicionar_destroyer(jogador_1, 1, 2, 3, 1, 2, 3)
-# Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
-# Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
-
-# for indice in jogador_1.tabuleiro:
-#     print(indice)
-
-print("  0, 1, 2, 3, 4")
-ind = 0
-for indice in jogador_1.tabuleiro:
-    print(f"{ind} [*, *, *, *, *]")
-    ind += 1
+Tabuleiro.verificar_fim_partida(jogador_1)
