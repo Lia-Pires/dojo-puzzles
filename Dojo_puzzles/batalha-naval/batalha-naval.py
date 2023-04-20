@@ -116,9 +116,10 @@ class Tabuleiro:
         print(
             "Digite os os índices de um tabuleiro 10x10 onde quer posicionar suas peças (LxC)!"
         )
+        print("Tabuleiro inicial: ")
         for indice in jogador.tabuleiro:
             print(indice)
-            
+
         num1, num2, num3, num4, num5, num6, num7, num8, num9, num10 = map(
             int, input("Porta aviões, comprimento 5: ").split(",")
         )
@@ -152,6 +153,14 @@ class Tabuleiro:
         for indice in jogador.tabuleiro:
             print(indice)
 
+    def tabuleiro_oponente(oponente):
+        print("Escolha o índice onde quer atacas (LxC):")
+        print("  0, 1, 2, 3, 4")
+        ind = 0
+        for indice in jogador_1.tabuleiro:
+            print(f"{ind} [*, *, *, *, *]")
+            ind += 1
+
 
 jogador_1 = Tabuleiro()
 jogador_2 = Tabuleiro()
@@ -169,5 +178,11 @@ jogador_2 = Tabuleiro()
 # Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
 # Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
 
+# for indice in jogador_1.tabuleiro:
+#     print(indice)
+
+print("  0, 1, 2, 3, 4")
+ind = 0
 for indice in jogador_1.tabuleiro:
-    print(indice)
+    print(f"{ind} [*, *, *, *, *]")
+    ind += 1
