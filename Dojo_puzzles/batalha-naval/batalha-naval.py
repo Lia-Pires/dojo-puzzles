@@ -112,16 +112,62 @@ class Tabuleiro:
             for itens in lista:
                 jogador.tabuleiro[itens[0]][itens[1]] = "b.p"
 
+    def organizar_tabuleiro(jogador):
+        print(
+            "Digite os os índices de um tabuleiro 10x10 onde quer posicionar suas peças (LxC)!"
+        )
+        for indice in jogador.tabuleiro:
+            print(indice)
+            
+        num1, num2, num3, num4, num5, num6, num7, num8, num9, num10 = map(
+            int, input("Porta aviões, comprimento 5: ").split(",")
+        )
+        Tabuleiro.posicionar_porta_avioes(
+            jogador, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10
+        )
+
+        num1, num2, num3, num4, num5, num6, num7, num8, num9, num10 = map(
+            int, input("Encouraçado, comprimento 4: ").split(",")
+        )
+        Tabuleiro.posicionar_encouracado(
+            jogador, num1, num2, num3, num4, num5, num6, num7, num8
+        )
+
+        num1, num2, num3, num4, num5, num6, num7, num8, num9, num10 = map(
+            int, input("Destroyer, comprimento 3: ").split(",")
+        )
+        Tabuleiro.posicionar_destroyer(jogador, num1, num2, num3, num4, num5, num6)
+
+        um1, num2, num3, num4, num5, num6, num7, num8, num9, num10 = map(
+            int, input("Submarino, comprimento 3: ").split(",")
+        )
+        Tabuleiro.posicionar_submarino(jogador, num1, num2, num3, num4, num5, num6)
+
+        num1, num2, num3, num4, num5, num6, num7, num8, num9, num10 = map(
+            int, input("Barco Patrulha, comprimento 2: ").split(",")
+        )
+        Tabuleiro.posicionar_barco_patrulha(jogador, num1, num2, num3, num4)
+
+        print("Tabuleiro Final: ")
+        for indice in jogador.tabuleiro:
+            print(indice)
+
 
 jogador_1 = Tabuleiro()
 jogador_2 = Tabuleiro()
 
-Tabuleiro.posicionar_porta_avioes(jogador_1, 0, 0, 0, 1, 0, 2, 0, 3, 0, 4)
-Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 1, 3, 4)
-Tabuleiro.posicionar_destroyer(jogador_1, 1, 2, 3, 1, 2, 3)
-Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
-Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
 
+#     Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 1, 3, 4)
+
+#     Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
+#     Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
+
+
+# Tabuleiro.posicionar_porta_avioes(jogador_1, 0, 0, 0, 1, 0, 2, 0, 3, 0, 4)
+# Tabuleiro.posicionar_barco_patrulha(jogador_1, 1, 1, 3, 4)
+# Tabuleiro.posicionar_destroyer(jogador_1, 1, 2, 3, 1, 2, 3)
+# Tabuleiro.posicionar_encouracado(jogador_1, 1, 2, 3, 4, 1, 2, 3, 4)
+# Tabuleiro.posicionar_submarino(jogador_1, 1, 2, 3, 4, 1, 2)
 
 for indice in jogador_1.tabuleiro:
     print(indice)
