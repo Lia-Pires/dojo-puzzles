@@ -162,8 +162,8 @@ class Tabuleiro:
             ind += 1
 
     def atacar_oponente(oponente, num1, num2):
-        if oponente.tabuleiro[num1][num2] is not int:
-            print(f"Você atingiu uma parte {oponente.tabuleiro[num1][num2]}")
+        if type(oponente.tabuleiro[num1][num2]) != int:
+            print(f"Você atingiu uma parte do {oponente.tabuleiro[num1][num2]}")
             oponente.tabuleiro[num1][num2] = 0
         else:
             print("Você não atingiu seu oponente, aguarde a próxima rodada.")
