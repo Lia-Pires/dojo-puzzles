@@ -40,6 +40,14 @@ class Tabuleiro:
 
         self.tabuleiro = [A, B, C, D, E]
 
+        navios = (
+            {"p.a": "Porta-Aviões"},
+            {"enc": "Encouraçado"},
+            {"sub": "Submarino"},
+            {"des": "Destroyer"},
+            {"bp": "Barco de Patrulha"},
+        )
+
     # TODO: colocar o tipo de jogador nas annotations
     def verificar_espacos(lista: list, jogador) -> bool:
         for itens in lista:
@@ -163,6 +171,7 @@ class Tabuleiro:
     def atacar_oponente(oponente, num1, num2):
         if type(oponente.tabuleiro[num1][num2]) != int:
             print(f"Você atingiu uma parte do {oponente.tabuleiro[num1][num2]}")
+            atingido = oponente.tabuleiro[num1][num2]
             oponente.tabuleiro[num1][num2] = 0
         else:
             print("Você não atingiu seu oponente, aguarde a próxima rodada.")
@@ -175,6 +184,14 @@ class Tabuleiro:
             else:
                 pass
         return True, print("A partida chegou ao fim")
+
+    def verificar_navio_afundado(atingido, oponente):
+        navio = any(atingido in sublista for sublista in oponente.tabuleiro)
+        if navio:
+            pass
+        else:
+            navio_afundado = Tabuleiro.navios.get("atingido")
+            print(f"Você afundou o {navio_afundado}")
 
 
 jogador_1 = Tabuleiro()
