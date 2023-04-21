@@ -13,6 +13,7 @@ Cada problema resolvido possui sua própria pasta, contendo o arquivo com o enun
 |------|-------|--------|
 | 1  | [Crivo de Eratóstenes](https://github.com/Lia-Pires/dojo-puzzles/blob/main/Dojo_puzzles/crivo-eratostenes/crivo_eratostenes.py)    | [Fonte](https://dojopuzzles.com/problems/crivo-de-eratostenes/) |
 | 2 | [Diamantes](https://github.com/Lia-Pires/dojo-puzzles/tree/main/Dojo_puzzles/diamantes) |   [Fonte](https://dojopuzzles.com/problems/diamantes/) |
+| 3 | [Batalha Naval](https://github.com/Lia-Pires/dojo-puzzles/tree/main/Dojo_puzzles/batalha-naval) |   [Fonte](https://dojopuzzles.com/problems/batalha-naval/) |
 
 
 
