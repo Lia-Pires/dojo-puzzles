@@ -4,6 +4,8 @@ Este repositório contém as minhas soluções para os problemas propostos pelo 
 
 Todos os problemas foram resolvidos utilizando Python 3.11.2.
 
+
+
 ## Como navegar pelo repositório
 
 Cada problema resolvido possui sua própria pasta, contendo o arquivo com o enunciado do problema e código fonte com a solução. 
