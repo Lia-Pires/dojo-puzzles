@@ -14,13 +14,14 @@ from math import sqrt, floor
 
 
 def primos_range(numero: int) -> list:
+    numero = floor(sqrt((numero)))
     lista_primos = []
     for numero in range(numero, 1, -1):
         total_divisor = 0
-        divisor = numero
+        divisor = numero + 1
         while divisor >= 1:
             divisor -= 1
-            if numero % divisor == 0:
+            if divisor != 0 and numero % divisor == 0:
                 total_divisor += 1
         if total_divisor == 2:
             lista_primos.append(numero)
@@ -28,7 +29,12 @@ def primos_range(numero: int) -> list:
     return lista_primos
 
 
-numero = int(input("Digite um número inteiro qualquer: "))
-crivo_erastostenes = primos_range(floor(sqrt((numero))))
+crivo_erastostenes = primos_range(20)
 
-print(f"Os números primos até o limite {numero} são: {crivo_erastostenes}")
+print(f"Os números primos até o limite √20 são: {crivo_erastostenes}")
+
+
+# numero = int(input("Digite um número inteiro qualquer: "))
+# crivo_erastostenes = primos_range(floor(sqrt((numero))))
+
+# print(f"Os números primos até o limite {numero} são: {crivo_erastostenes}")
