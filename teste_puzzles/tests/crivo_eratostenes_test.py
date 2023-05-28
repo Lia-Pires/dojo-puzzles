@@ -1,7 +1,7 @@
 import pytest
 from pytest import mark
 
-from dojo_puzzles.crivo_eratostenes.crivo_eratostenes import primos_range
+from teste_puzzles.crivo_eratostenes.crivo_eratostenes import primos_range
 
 
 @mark.parametrize(
