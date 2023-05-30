@@ -1,8 +1,11 @@
 # Dojo Puzzles Resolvidos
 
-Este repositório contém as minhas soluções para os problemas propostos pelo [Dojo Puzzles](http://dojopuzzles.com/). 
+Este repositório contém minhas soluções para os problemas propostos pelo [Dojo Puzzles](http://dojopuzzles.com/). 
+
 
 Todos os problemas foram resolvidos utilizando Python 3.11.2.
+
+
 
 
 
