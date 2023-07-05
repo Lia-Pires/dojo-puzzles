@@ -242,3 +242,4 @@ class Jogo:
         for indice in jogador_2.tabuleiro:
             print(f"{ind}{indice}")
             ind += 1
+
